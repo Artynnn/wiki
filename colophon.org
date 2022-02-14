@@ -5,9 +5,23 @@
 #+filetags: :Web:
 #+date: <2022-02-14 Mon 16:21>
 
+[[https://github.com/Artynnn/artyn-garden-hugo-source][Source code for the website]].
+
 This is about the [[https://artyns-garden.vercel.app][design of the website]] and the principles behind them.
 
 * Principles
 ** Progressive Enhancement
 
-This is the idea that features should be features not baseline essentials. I try to have features on this website (sidenotes, aside table of contents) but if a website doesn't support Javascript or CSS (like a text browser), this website is viewable without.
+This is the idea that features should be features not baseline essentials. I try to have features on this website (sidenotes, aside table of contents) but if a website doesn't support Javascript or CSS (like a text browser), this website is viewable without it.
+
+My website trys to be accessible to all browsers.
+
+** KISS
+
+Do not use over-engineered build scripts, web frame works or web tooling. The max I am going to use is maybe SASS and [[https://esbuild.github.io/][esbuild]].
+
+** Keep content clean
+
+I keep my [[https://github.com/Artynnn/wiki/][content in a seperate git repository]] and I try to keep it as clean as possible, I don't want anything tied to that is specific to Hugo or my website.
+
+This might seem a bit weird but I like the flexibility of packing up whenever I can. I don't see my content as fundamentally tied to website, which merely serves as a interface to it.
