@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       ff503a0d-548c-40a5-9233-32ed5cd12837
+:END:
+#+title: Colophon
+#+filetags: :Web:
+#+date: <2022-02-14 Mon 16:21>
+
+This is about the [[https://artyns-garden.vercel.app][design of the website]] and the principles behind them.
+
+* Principles
+** Progressive Enhancement
+
+This is the idea that features should be features not baseline essentials. I try to have features on this website (sidenotes, aside table of contents) but if a website doesn't support Javascript or CSS (like a text browser), this website is viewable without.
