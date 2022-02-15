@@ -18,7 +18,7 @@ My website trys to be accessible to all browsers.
 
 ** KISS
 
-Do not use over-engineered build scripts, web frame works or web tooling. The max I am going to use is maybe SASS and [[https://esbuild.github.io/][esbuild]].
+Do not use over-engineered build scripts, web frameworks or big tooling. The max I am going to use is maybe SASS and [[https://esbuild.github.io/][esbuild]].
 
 ** Keep content clean
 
