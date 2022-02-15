@@ -1,0 +1,23 @@
+This repository hosts the actual contents of my wiki.
+
+* On using Org-roam and Ox-hugo
+
+I try to keep my setup extremly simple. I do not use any build scripts at all, no Makefiles, no Ninja, no =publish.el= none of that. I manage it all through Emacs Lisp functions.
+
+A personal wiki doesn't have to be scalable at the 10,000 file level.
+
+=.dir-locals.el= is the file that locates where Ox-hugo will build.
+
+When I am on a Org-mode file and I want it on my website. I bind a key =C-c n p= to a command from ox-hugo (org-hugo-export-to-md),
+
+Magit is how I push and commit my changes from the two git repositories I run (this and the hugo source).
+
+I bound this to =C-n n w=, if I want to publish fast
+
+#+begin_src emacs-lisp
+(defun artyn/publish-to-vercel ()
+    "publish Hugo website to vercel with one key command"
+    (interactive)
+    (call-process-shell-command "cd ~/projects/artyns-garden.vercel.app/ && vercel --prod" nil 0)
+    (message "website is being published"))
+#+end_src
