@@ -8,11 +8,15 @@ A personal wiki doesn't have to be scalable at the 10,000 file level.
 
 =.dir-locals.el= is the file that locates where Ox-hugo will build.
 
-When I am on a Org-mode file and I want it on my website. I bind a key =C-c n p= to a command from ox-hugo (org-hugo-export-to-md),
+When I am on a Org-mode file and I want it on my website. I bind a key =C-c n p= (Control-c n p) to a command from ox-hugo (org-hugo-export-to-md), and this transforms that content into markdown and is delived to my hugo =content/= directory.
 
-Magit is how I push and commit my changes from the two git repositories I run (this and the hugo source).
+#+begin_src emacs-lisp :tangle ~/.emacs.d/init.el
+(global-set-key (kbd "C-c n p") org-hugo-export-to-md)
+#+end_src
 
-I bound this to =C-n n w=, if I want to publish fast
+Magit and VC is how I push and commit my changes from the two git repositories I run (this and the [[https://github.com/Artynnn/artyn-garden-hugo-source][hugo source]]).
+
+I bound this to =C-n n w=, if I want to publish fast:
 
 #+begin_src emacs-lisp
 (defun artyn/publish-to-vercel ()
