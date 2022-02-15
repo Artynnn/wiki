@@ -24,4 +24,6 @@ I bound this to =C-n n w=, if I want to publish fast:
     (interactive)
     (call-process-shell-command "cd ~/projects/artyns-garden.vercel.app/ && vercel --prod" nil 0)
     (message "website is being published"))
+
+(global-set-key (kbd "C-c n w") artyn/publish-to-vercel)
 #+end_src
