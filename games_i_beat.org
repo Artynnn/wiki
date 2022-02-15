@@ -2,7 +2,7 @@
 :ID:       b13f19e5-6163-4f94-ac6d-e2cacd0fb711
 :END:
 #+title: Games I Beat
-#+filetags: :Gaming:Evergreen:Personal:
+#+filetags: :Gaming:Evergreen:
 #+date: <2022-02-14 Mon>
 
 This is a updating list of games I beat (note not just games I played) a long with some short thoughts on them.
@@ -11,7 +11,7 @@ I don't find numeric ratings helpful so I don't do them.
 
 * 2021
 
-Overall the year had me playing total classics.
+Overall the year had me playing total classics. Other then Swords and Sandals, I would recommended all of these games. The one that blew me away was Pikmin.
 
 1. *Faxanandu (NES)*: I beat this game with a guide ([[https://strategywiki.org/wiki/Faxanadu][Strategywiki guide]] was very well developed) and I think that greatly enhanced the experience. A very enjoyable action RPG.
 
