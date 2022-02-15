@@ -2,7 +2,7 @@
 :ID:       b13f19e5-6163-4f94-ac6d-e2cacd0fb711
 :END:
 #+title: Games I Beat
-#+filetags: :Personal:
+#+filetags: :Gaming:Evergreen:Personal:
 #+date: <2022-02-14 Mon>
 
 This is a updating list of games I beat (note not just games I played) a long with some short thoughts on them.
@@ -11,10 +11,31 @@ I don't find numeric ratings helpful so I don't do them.
 
 * 2021
 
-- Faxanandu (NES): I beat this game with a guide (strategywiki's guide was very well developed) and I think that greatly enhanced the experience. A very enjoyable action RPG.
+Overall the year had me playing total classics.
 
-- Flintstones: The rescue of Dino and Hoppy (NES): Extremly enjoyable platformer, one of Taito's late release NES game. I find the game extremly brutal in beginning but it gets easier once you get used to it. I like how varied the levels are in this game. Definitely one of my favorite NES games.
+1. *Faxanandu (NES)*: I beat this game with a guide ([[https://strategywiki.org/wiki/Faxanadu][Strategywiki guide]] was very well developed) and I think that greatly enhanced the experience. A very enjoyable action RPG.
 
-- Flintstones: The Surprise at Dinosuar Peak (SNES): Extremly late NES game that was equal to former game. Really good and a well-deserved sequel. It uses the same game engine it seems from the last game.
+2. *Flintstones: the Rescue of Dino and Hoppy (NES)*: Extremly enjoyable platformer, one of Taito's late release NES game. I find the game extremly brutal in beginning but it gets easier once you get used to it. I like how varied the levels are in this game. Definitely one of my favorite NES games.
 
+3. *Flintstones: The Surprise at Dinosuar Peak (SNES)*: Extremly late NES game that was equal to former game. Really good and a well-deserved sequel. It uses the same game engine it seems from the last game.
+
+4. *Spore (PC)*: I remember really being excited to play this game when it came out but never got to. I was personally shocked how short this game was, I beat it in less then a week. No stage took more then 2 hours (and 2 hours is really pushing it). I beat this game with a guide and once you know the tricks this game is a breeze.
+
+   I still like the game, but I am glad I didn't buy it when it came out. It seems like a really good game for challenges.
+
+5. *Link to the Past (SNES)*
+
+6. *Castle of Illusion (Genesis/Mega Drive)*
+
+7. *Pikmin (GC)*
+
+8. *Swords and Sandals 1, 2 and 3 (Web, Flash)*
+
+9. *Kirby and the crystal shards (N64)*
+
+* 2022
+
+1. *EVO: Search for Eden (SNES)*
+   
+2. *Mario Kart Doube Dash (GC)*
 
