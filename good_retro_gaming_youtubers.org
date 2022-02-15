@@ -11,6 +11,8 @@ I will group them into various categories for convience, but some of them do occ
 
 This is a evolving document, its basically my written out Youtube subscriptions but with more detail. This only includes the ones I have actually watched.
 
+# might include channel links sorted by most popular https://www.youtube.com/c/OddTinkering/videos?view=0&sort=p&flow=grid
+
 * The exploiters
 
 These focus on exploring the game logic and breaking and glitching it to do awesome things. Weather that be to be stuck in a level for 478 years, giving Mario a laser sword or creating a dissembler in Super Mario World.
@@ -84,6 +86,18 @@ Their YouTube is mainly showcasing their various projects but Twitch streams sho
 
 They fix and enhance Gameboys. I find it interesting how much people have enhanced their gameboys (adding backlit displays, batteries).
 
+** Odd Tinkering
+
+#+begin_quote
+No annoying music, no talking, plenty of info, beautiful shots, masterful work. - youTube comment
+#+end_quote
+
+Very popular channel focused on restoration. It is uncommented and ASMR focused (which I am not the biggest fan of). Their descriptions are very useful and explains what they do so be sure to read them.
+
+It has paid promotions but thankfully those aren't commented which is extremly refreshing.
+
+See also their second channel [[https://www.youtube.com/channel/UCL5OpT5ewaPBpfroIJ4HbFw/videos][Odd Experiments]].
+
 * Emulation
 
 /Disclaimer: I personally dont watch any content on Emulation/
@@ -117,6 +131,7 @@ This focus on the compostional aspect. My favorite video of theirs is the video 
 
 Yes Yuzo Koshiro has a YouTube. Hes is probably the biggest VGM artist of his time.
 
+** Malcom Robinson Music
 * Historians
 ** strafefox
 ** Gaming Historian
