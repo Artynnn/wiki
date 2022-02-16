@@ -11,7 +11,8 @@ This is the only part of the website that covers more social-political-legal ("n
 
 I am not sure I will stand by these thoughts in a few days, weeks or years and only reflect the date that they were recorded. 
 
-* <2022-02-16 Wed> Google Search is going bad (is it?)
+* Feburary 2022
+** 16th - Google Search is going bad (is it?)
 
 Their has been a extremly popular article called [[https://dkb.io/post/google-search-is-dying][Google Search is dying]]. I find it kinda suspicious.
 
