@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       eba4bafb-b038-446b-a9b5-52d4ac405bd5
+:END:
+#+title: Dead Websites that are Worth Checking out
+#+date: <2022-02-15 Tue 19:41>
+
+These website are not on the Web and only exist on archives.
+
+- [[https://archive.fo/lmBNz][Taking Notes Now]]: Was ran by the philosopher Manfred Kuehn. This is where I first heard of the /Zettelkasten/ idea back in 2015?
+
+- [[https://web.archive.org/web/20200114110035/users.belgacom.net/wagnerlibrary][Wagner Library]]: This was by far the best website I have read on Richard Wagner. I really liked it since it doesn't sugercoat, it tells exactly what he did, what he wrote and what people thought about him. 
+
+  - Simple fast static website that is easily navigable. 99% of websites on Richard Wagner are some of the most bloated wordpress sites I have ever seen. It also included content in multiple formats.
+
+  - Doesn't whitewash him. Includes his problematic and disgusting writings. I have seen very few website on Wagner include them. I think that websites should strive for a honest look, not be PR.
+
+  - [[https://web.archive.org/web/20050311154727/http://users.belgacom.net/wagnerlibrary/other/index.htm][Hard to find commentary on Wagner]]. I never knew [[https://en.wikipedia.org/wiki/Simone_Weil][Simone Weil]] wrote about Wagner ([[https://web.archive.org/web/20050321213619/http://members.aol.com/wagnerbuch/intro.htm][Wagner and the Jews]]). Or Max Nordau's thoughts on Wagner (who was a contemporary). Some interesting dissertations are also linked.
+ 
+
+
