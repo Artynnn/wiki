@@ -1,0 +1,46 @@
+:PROPERTIES:
+:ID:       0e1d4071-1bb6-488c-b4b0-6fab6a84cf86
+:END:
+#+title: Tech News Musings
+#+filetags: :Misc:
+#+date: <2022-02-16 Wed 11:19>
+
+These are my short thoughts on various things. Not big enough to be a whole page. Basically twitter threads.
+
+This is the only part of the website that covers more social-political-legal ("news") things. I try to avoid this as much as possible due its to divisiveness, uncertainty and fluidity. This content gets dated really quick.
+
+I am not sure I will stand by these thoughts in a few days, weeks or years and only reflect the date that they were recorded. 
+
+* <2022-02-16 Wed> Google Search is going bad (is it?)
+
+Their has been a extremly popular article called [[https://dkb.io/post/google-search-is-dying][Google Search is dying]]. I find it kinda suspicious.
+
+Why are all the people cited just so happen to be people who work at Y Combinator? Why did it blow up so much at a website affilated with that startup incubator [fn:1]?
+
+The thing that irks me about it is the narrow mindedness of it and of the articles he cites. Its like they assume that everyone is like them and if the results don't conform to what they want then it means that Google Search is wrong.
+
+Does everyone want to see Reddit[fn:4] when look for a product? Do people want to see Rotten Tomatoes when they search up a movie? I personally don't.
+
+I personally don't like Google Search due to its monopolistic nuture (which is true of the whole search engine industry [fn:2]), the difficulty for a small website to be indexed and [[https://irreal.org/blog/?p=9982][search warrants]] [fn:3].
+
+Maybe I am doing the same mistake, since I don't personally feel a decline in the quality of search results. Looking at my Google search history I only search for things that I am needing to reference. Maybe 1% of it seems to be me looking for answers on something (and usually very specific answers like "RISC-V support nixOS").
+
+If [[https://dkb.io/post/organize-the-world-information][this page is indicative of the type of content they search for]] then we are diametric opposites, things like "American Revolution Blogs" [fn:6] or "What should I with my life" [fn:7] and "content that talks about the same idea as The Refragmentation by Paul Graham” [fn:5].
+
+* Footnotes
+
+[fn:7] Literally the last thing I would search. Why would ask /other/ people on what should /I/ do? I do what I want.
+
+[fn:6] Why would you look for blogs? Especially on a subject that is not seeing much development. I would only read a book on the subject. Books are always more well-researched then blog posts.
+
+[fn:5] Why people are so obsessed with this guy? Did he invent HTTP? Did he make public-key cryptography? He literally just made a obsolete web app and has loads of cash and loads of free time to make silly analogies. They treat him like hes the greatest though leader of the 20th century.
+
+I would ask this type of question to real people and we could bounce off ideas.
+
+[fn:4] So many results I have seen on Reddit is flat out misinfo and wrong. Particularly if something is decisive or misunderstood. I don't trust random internet community to give me correct answers on anything.
+
+[fn:3] Sorry people with OCD, Google will give your worrying searches to the police. 
+
+[fn:1] I am sorry if I sound extremly paranoid but their is something 🐟 about all of this. Could this be a 🐡 piece for a upcoming startup?
+
+[fn:2] A lot of people don't know this but there are only 2 real English search engines. Bing and Google. The rest are just proxies of mainly Bing.
