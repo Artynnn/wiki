@@ -29,10 +29,15 @@ Websites should be beautiful. Have beautiful typography and niceties.
 There are many reasons why I prefer the personal wiki format for my website rather then a blog.
 
 - Quality is favored over recency.
+  
 - Easier to approach the whole site, particularity if it's very divergent compared to what you usually see. Grokking is easier.
+  
 - Modification is normal and good.
+  
 - Holism over trendiness
+  
 - drafts are okay (stubs), nothing wrong in making them. This makes it easy to make more content.
+  
 - Long absences are okay
 
 Blogs are great, but I don't think they suit the purpose of my personal website and what I want. My blogging needs are solved with Mastodon.
@@ -56,9 +61,13 @@ I guess medium modifications will be posted on my Mastodon? IDK yet.
 My website has a lot of features that aid its function as a personal wiki.
 
 - Link to revision history.
+  
 - Side-notes (you don't have to click 25 times backward and forward). Also the sidenotes are just Hugo footnotes not shortcodes or any special syntax. Things behave normally if javascript is disabled
+  
 - Backlinks: See where the page you are currently viewing is referred to.
+  
 - aside TOC: for easy navigation? This is a bit buggy.
+  
 - link to jump to top of the page
 
 ** possible future features
