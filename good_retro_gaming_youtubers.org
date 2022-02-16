@@ -9,10 +9,39 @@ These are content creators who do excellent in depth videos on retro games. Rath
 
 I will group them into various categories for convience, but some of them do occasional videos on other aspects. I will also add inactive ones since this content is basically timeless. 
 
-This is a evolving document, its basically my written out Youtube subscriptions but with more detail. This only includes the ones I have actually watched.
+This is a evolving document, its basically my written out Youtube subscriptions but with more detail. This only includes the ones I have actually watched. Currently its very incomplete and more like a draft.
 
 # might include channel links sorted by most popular https://www.youtube.com/c/OddTinkering/videos?view=0&sort=p&flow=grid
 
+* Programmers
+** Gamehut
+
+They were one of the main developers of Sonic R and their still active in the demoscene community.
+
+** Retro Game Mechanics Explained
+** Bisqwit
+
+They do Video Game Videos anymore.
+
+** Displaced Gamers
+* Musicians
+
+This is what I currently mainly watch.
+
+** GST
+** 8 Bit Music Theory
+
+This focus on the compostional aspect. My favorite video of theirs is the video on Chrono Trigger.
+
+** Sound Sack
+** Yuzo Koshiro
+
+Yes Yuzo Koshiro has a YouTube. Hes is probably the biggest VGM artist of his time.
+
+** Malcom Robinson Music
+* Historians
+** strafefox
+** Gaming Historian
 * The exploiters
 
 These focus on exploring the game logic and breaking and glitching it to do awesome things. Weather that be to be stuck in a level for 478 years, giving Mario a laser sword or creating a dissembler in Super Mario World.
@@ -67,11 +96,13 @@ Inactive podcast on speed running. The focus on channel was about speedrunning t
 
 It is very player-centric but it does go into a lot of technical detail for the various games. I personally like the Mario Kart videos.
 
-** Speedlore
+** Specific games
 
-In depth analysis of goldenEye and perfect Dark speedruns and strategies. I am excluding their main channel as it focuses too much on the human interest aspect and news too much.
+- Speedlore: In depth analysis of goldenEye and perfect Dark speedruns and strategies. I am excluding their main channel (RWhiteGoose) as it focuses too much on the human interest aspect and news too much.
 
 Note these are live streams and are quite long.
+
+- OneShortEye: Kings quest speedrunning 
 
 * The ROM hackers
 
@@ -79,12 +110,12 @@ These people focus on using retro games as a platform to build their own games o
 
 ** Kaze Emanuar (Mario 64)
 
-Their YouTube is mainly showcasing their various projects but Twitch streams show them developing the games. 
+Their YouTube is mainly showcasing their various projects but their Twitch streams show them developing the games. 
 
 * Hardware hackers
 ** Rainbow Repair
 
-They fix and enhance Gameboys. I find it interesting how much people have enhanced their gameboys (adding backlit displays, batteries).
+They fix and enhance Gameboys. It is Interesting how much people have enhanced their gameboys (adding backlit displays, batteries).
 
 ** Odd Tinkering
 
@@ -106,40 +137,14 @@ See also their second channel [[https://www.youtube.com/channel/UCL5OpT5ewaPBpfr
 
 They focus on emulation developments and progress (and some videos on console hacking). Their videos are very well done.
 
-* Programmers
-** Gamehut
-
-They were one of the main developers of Sonic R and their still active in the demoscene community.
-
-** Retro Game Mechanics Explained
-** Bisqwit
-
-They do Video Game Videos anymore.
-
-** Displaced Gamers
-* Musicians
-
-This is what I currently mainly watch.
-
-** GST
-** 8 Bit Music Theory
-
-This focus on the compostional aspect. My favorite video of theirs is the video on Chrono Trigger.
-
-** Sound Sack
-** Yuzo Koshiro
-
-Yes Yuzo Koshiro has a YouTube. Hes is probably the biggest VGM artist of his time.
-
-** Malcom Robinson Music
-* Historians
-** strafefox
-** Gaming Historian
 * Wizards
 
 "WTF how is that possible"
 
 ** Suckerpinch
+
+NES AI, reverse emulation, 3Dification of NES games.
+
 * Footnotes
 
 [fn:2] My biggest problem with these types of YouTubers is (1) if their videos aren't funny its extremly painful to watch and (2) so many of them are extremely uninformed about their given topic that its super annoying to watch. Finding YouTubers in categories listed here is always a joy.
