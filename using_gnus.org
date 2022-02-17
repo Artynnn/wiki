@@ -1,0 +1,369 @@
+:PROPERTIES:
+:ID:       ef79a70b-5b7c-4b3e-b615-9593ec2860cc
+:END:
+#+title: Using Gnus
+#+filetags: :Emacs:
+#+date: <2022-02-16 Wed 19:00>
+
+Gnus is the oldest currently used Emacs email client, it now comes with Emacs. And it has been the Emacs choice for Usenet and E-mail going back decades.
+
+It sorta seems to me to be the VC [fn:1] of text communications. It tries to unite multiple protcols that have conceptual similarites into one UI. I was initially skeptical of this at first but after really learning VC I think their is a lot of benfits to this approach and I believe it could be considered to be part of the "Emacs way of things".
+
+#+begin_quote
+There are the simple things like keeping track of which posts you've read or haven't seen yet, and customizing how threads are sorted and displayed.
+
+There's more advanced features like tagging, scoring, watching, ignoring, and so on. Have you ever been following a discussion, but it's wandered off topic and people are now discussing something you're not interested in? Well, newsreaders let you ignore subthreads, but continue reading the rest without the clutter. - Taviso [Github]
+#+end_quote
+
+* Terminology
+
+Gnus is extremly old and pre-dates most mail clients (very similar to story to VC). So its terminology is completely different then most. I think its terminology is actually helpful since it is more abstracted and makes more sense for its trual NNTP+mail+RSS usage [fn:2].
+
+- Group: mail folder. Main semantic unit of Gnus.
+- Group buffer: Buffer of mail folders.
+- Summary buffer: List mails.
+
+Overall the UI looks like this, order by screens you see first
+
+1. Gnus ascii logo (loading up)
+2. Newsgroup list / Group Buffer [first real screen]. This is the equivalent of a forum front page
+3. Group summary list: This is like visitied a sub-forum or Reddit.
+4. Article reading view
+
+* In a nutshell
+
+Gnus is a mulit-protocol discussion app. That arranges things in the image of Usenet Newsgroups.
+
+Its want the world to be organized into servers [hosting provider, protocols], which hold groups [subforums] and that hold articles [post].
+
+# maybe a drawing would be nice here like Karthik style
+
+Gnus interface first shows the group buffer [a list of groups], =^= to go to the server buffer [a list of servers]. =ENTER= on a group in a group buffer shows you the summary buffer [a list of messages]. =ENTER= on a article in the summary buffer opens up a new vsplit that shows the article-display buffer. The =article-buffer= and =summary buffer= are meant to used in conjunction together.
+
+* Weirdness
+
+One of the notorious things about Gnus. Is that it keybindings are seen as non-sensical, probably designed unfortunately in a hap-hazard and has become sort of a meme:
+
+#+begin_quote
+‘F’ is group reply. This is because ‘G’ is for sort and ‘g’ is for get new mail. And ‘G’ is for sort because ‘sort’ used be called ‘group’, and anyway ‘S’ is for save mailbox and ‘s’ is for file message in folder, because ‘f’ is group reply and ‘F’ is group reply including original text.
+#+end_quote
+
+Also the [[https://www.gnu.org/software/emacs/manual/html_node/gnus/index.html][Gnus Manual]] (=C-h i= in Emacs to access it) is apparently filled with jokes that some find annoying when just looking for info. I haven't read it yet to verify.
+
+* configuration
+
+Unlike almost any other package in Emacs, you must put your code in a specific spot, =~/.gnus.el=. I find this bizzare but it does make finding peoples configurations easier.
+
+** Usenet
+
+This is a good guide: https://scottmcpeak.com/gnus.html.
+
+To use Usenet you need to have a server provider. They use to be all free since the ISP provided access, but most of them are paid. Thankfully there are still free ones left like [[https://www.eternal-september.org/index.php?showpage=faq][eternal-september]], they just don't allow piracy or binaries which is not something we want to do anyway.
+
+We need to check our email and see the login and password information, we need to add this line to authinfo to see the news groups:
+
+#+begin_src sh
+machine news.eternal-september.org login xxxxxx force yes password xxxxxxxx 
+#+end_src
+
+So lets connect to the news server:
+
+#+begin_src emacs-lisp :tangle ~/.gnus.el
+(setq gnus-select-method
+  '(nntp "news.eternal-september.org"
+	 (nntp-port-number 119)))
+#+end_src
+
+Now we should be able to access Gnus. =M-x gnus=.
+
+There are 2 major modes, =group-mode= and =summary-mode= (also called article-mode).
+
+We are first launched into =group-mode=, The next you should run is shift-a, shift-a (=A A=) which runs "gnus-group-list-active", lists all the newsgroup known to the server.
+
+Wow its list like 30,000 newsgroups. Holy cow. To find stuff use =C-s= and =C-r=. I personally have a customing bidnign =M-s l=, first swiper like search functionality.
+
+https://www.gnu.org/software/emacs/refcards/pdf/gnus-refcard.pdf
+
+Some that are known to still be active. I found these mentioned on link aggregators:
+
+- comp.sys.raspberry-pi
+- rec.woodworking
+- comp.lang.forth (they talk about Forth, but the discussion can be quite heated at times)
+- comp.infosystems.gemini
+- alt.fan.cecil-adams (general talk about news/politics)
+
+The rule of thumb is that Tech groups still have some activity. 
+
+=L= to list all the subscribed groups, defined in .newsrc?
+
+=l= List only subscribed groups with unread articles
+
+=u= toggle subscription
+
+=enter= go to the thing at point
+
+=g= get, reGenerate,
+
+=q= quit.
+
+=C-h m= or =C-h b= for all the keybindings.
+
+** Email
+
+This is the second protocol its support POP3 / IMAP and it has its own uniqute methods and protocols on creating Email to act and feel like Usenet groups.  
+
+G G to search mail, you can subscribe to search and they become groups. Sorta like a virtual folder.
+
+C-u G G for rfc3501 search, which has more advanced features.
+
+reconmended replacement to this syntax https://github.com/redguardtoo/dianyou
+
+/ w to cancel current filter
+
+/ a is by author
+
+/ / by subject?
+
+R to reply with quoted text
+
+m in gnus or C-x m to compose a new email
+
+C-c C-a attach file
+
+o to save attachment (gnu mime save part)
+
+=~/.mailcap= determines what external program is used.
+
+/ N to refresh summary buffer?
+
+c to mark mail as read
+
+Gnus writes the configuration into ~/.newsrc.eld and ~/.newsrc-dribble. The configuration is actually just simple lisp code I could move into ~/.gnus.el.
+
+topics can be automatically defined like so:
+
+#+begin_quote
+(eval-after-load 'gnus-topic
+  '(progn
+     (setq gnus-message-archive-group '((format-time-string "sent.%Y")))
+     (setq gnus-topic-topology '(("Gnus" visible)
+                                 (("misc" visible))
+                                 (("hotmail" visible nil nil))
+                                 (("gmail" visible nil nil))))
+
+     ;; key of topic is specified in my sample ".gnus.el"
+     (setq gnus-topic-alist '(("hotmail" ; the key of topic
+                               "nnimap+hotmail:Inbox"
+                               "nnimap+hotmail:Sent"
+                               "nnimap+hotmail:Drafts")
+                              ("gmail" ; the key of topic
+                               "nnimap+gmail:INBOX"
+                               "nnimap+gmail:[Gmail]/Sent Mail"
+                               "nnimap+gmail:[Gmail]/Drafts")
+                              ("misc" ; the key of topic
+                               "nnfolder+archive:sent.2015-12"
+                               "nnfolder+archive:sent.2016"
+                               "nndraft:drafts")
+                              ("Gnus")))))
+#+end_quote
+
+Install BBDB through melpa. It is an email address database written in Emacs Lisp.
+
+You can always use M-x bbdb-complete-name and M-x bbdb-complete-mail provided by BBDB.
+
+But there are other better plugins based on BBDB (so you still need install BBDB at first):
+
+To import contact list
+https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/gnus-guide-en.org#synchronize-from-gmail-contacts
+
+*** mailing list
+
+Unlike Usenet, mailing list are still alive and well.
+
+** RSS
+
+http://gwene.org/opml.php
+
+http://gwene.org/
+
+This I don't much nedd in since I really like elfeed.
+
+Maybe I will try it on some discussion oriented websites.
+
+* Awesomeness
+** scoring
+
+#+begin_quote
+   All articles have a default score (‘gnus-summary-default-score’),
+which is 0 by default.  This score may be raised or lowered either
+interactively or by score files.  Articles that have a score lower than
+‘gnus-summary-mark-below’ are marked as read.
+#+end_quote
+
+* Hydra
+
+Hydra is recommended since there are so many confusing keys. 
+
+* manual notes
+
+The design process of gnus
+
+#+begin_quote
+Gnus is now a fully-featured email client, but it began life as a Usenet-style newsreader, and its genes are still newsreader genes. Thus it behaves a little differently than most mail clients.
+#+end_quote
+
+How newsreaders ought to be behave
+
+#+begin_quote
+  1. The server offers a potentially enormous number of newsgroups on a
+     variety of subjects.  The user may only be interested in some of
+     those groups, and more interested in some than others.
+  2. Many groups see a high volume of articles, and the user won’t want
+     to read all of them.  Mechanisms are needed for foregrounding
+     interesting articles, and backgrounding uninteresting articles.
+  3. Once a group has been scanned and dealt with by the user, it’s
+     unlikely to be of further interest until new articles come in.
+#+end_quote
+
+How gnus behaves:
+
+  #+begin_quote
+  1. Not all interesting groups are equally interesting, thus groups
+     have varying degrees of “subscribedness”, with different behavior
+     depending on “how subscribed” a group is.
+  2. There are many commands and tools for scoring and sorting articles,
+     or otherwise sweeping them under the rug.
+  3. Gnus will only show you groups with unread or ticked articles;
+     groups with no new articles are hidden.
+  4. When entering a group, only unread or ticked articles are shown,
+     all other articles are hidden.
+  #+end_quote
+
+So for the unfamilar, alot seems strange for internet type 
+
+- degrees of subscribedness (rather then this be a boolean value)
+- scoring
+- record read state
+- respond to read state
+
+"think of it as Automatic Inbox Zero"
+
+#+begin_quote
+The fundamental building blocks of Gnus are “servers”, “groups”, and
+“articles”.
+
+Servers can be local or remote.  Each server maintains a
+list of groups, and those groups contain articles.  Because Gnus
+presents a unified interface to a wide variety of servers, the
+vocabulary doesn’t always quite line up
+
+Thus a local maildir is referred to as a
+“server” (*note Finding the News::) the same as a Usenet or IMAP server
+is; “groups” (*note Group Buffer::) might mean an NNTP group, IMAP
+folder, or local mail directory; and an “article” (*note Summary
+Buffer::) might elsewhere be known as a message or an email.  Gnus
+employs unified terms for all these things.
+#+end_quote
+
+#+begin_quote
+Servers fall into two general categories: “news-like”, meaning that
+the articles are part of a public archive and can’t be manipulated by
+the user; and “mail-like”, meaning that the articles are owned by the
+user, who can freely edit them, move them around, and delete them.
+#+end_quote
+
+gnus tips
+
+(1) to subscribe to group, ^ to go to server buffer, enter to go to their group buffer, =u= to subscribe or unsubscribe. If you see no marks on the side that means you are subscribed.
+
+   #+begin_quote
+   A Gnus installation is basically just a list of one or more servers,
+plus the user’s subscribed groups from those servers, plus articles in
+those groups.
+   #+end_quote
+
+#+begin_quote
+   Servers can be added and configured in two places: in the user’s
+gnus.el startup file, using the ‘gnus-select-method’ and
+‘gnus-secondary-select-methods’ options,
+#+end_quote
+
+more on subscribedness
+
+#+begin_quote
+Each group is subscribed at some “level” or other (1–9). The ones that have a lower level are “more” subscribed than the groups with a higher level. In fact, groups on levels 1–5 are considered “subscribed”; 6–7 are “unsubscribed”; 8 are “zombies”; and 9 are “killed”. Commands for listing groups and scanning for new articles will all use the numeric prefix as “working level”.
+#+end_quote
+
+I am currently on Chapter 2
+
+#+begin_quote
+   However, if you use one NNTP server regularly and are just interested
+in a couple of groups from a different server, you would be better
+served by using the ‘B’ command in the group buffer.  It will let you
+have a look at what groups are available, and you can subscribe to any
+of the groups you want to.  This also makes ‘.newsrc’ maintenance much
+tidier.  *Note Foreign Groups::.
+#+end_quote
+
+
+Chapter 4?
+
+#+begin_quote
+   All articles have a default score (‘gnus-summary-default-score’),
+which is 0 by default.  This score may be raised or lowered either
+interactively or by score files.  Articles that have a score lower than
+‘gnus-summary-mark-below’ are marked as read.
+#+end_quote
+
+#+begin_quote
+   There are two sorts of scoring entries: Permanent and temporary.
+Temporary score entries are self-expiring entries.  Any entries that are
+temporary and have not been used for, say, a week, will be removed
+silently to help keep the sizes of the score files down.
+#+end_quote
+
+temporary score file commands? Or atleast non scorefile comands
+
+a example score file.
+
+Im confused on where I should put this?
+
+#+begin_quote
+     (("from"
+       ("Lars Ingebrigtsen" -10000)
+       ("Per Abrahamsen")
+       ("larsi\\|lmi" -50000 nil R))
+      ("subject"
+       ("Ding is Badd" nil 728373))
+      ("xref"
+       ("alt.politics" -1000 728372 s))
+      ("lines"
+       (2 -100 nil <))
+      (mark 0)
+      (expunge -1000)
+      (mark-and-expunge -10)
+      (read-only nil)
+      (orphan -10)
+      (adapt t)
+      (files "/hom/larsi/News/gnu.SCORE")
+      (exclude-files "all.SCORE")
+      (local (gnus-newsgroup-auto-expire t)
+             (gnus-summary-make-false-root empty))
+      (eval (ding)))
+#+end_quote
+
+
+* Dealing with Error
+** GMAIL credential failed
+
+What is Gnus trying to do? I am confused
+** WARNING nnir is deprecated
+
+What is the replacement?
+
+* Footnotes
+
+[fn:2] It has additional back-ends for Reddit, Hacker News and Twitter, But I will be using the default ones for now.
+
+[fn:1] VC is Emacs built in version control (written by the author of CatB) that supports numerous version control systems all with same commands. It supports SCCS, CSSC, RCS, CVS, SVN, hg, git, bzr and [[https://gitlab.com/esr/src][SRC]].
+
