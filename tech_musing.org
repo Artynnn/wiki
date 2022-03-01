@@ -20,7 +20,7 @@ Why are all the people cited just so happen to be people who work at Y Combinato
 
 The thing that irks me about it is the narrow mindedness of it and of the articles he cites. Its like they assume that everyone is like them and if the results don't conform to what they want then it means that Google Search is wrong.
 
-Does everyone want to see Reddit[fn:4] when look for a product? Do people want to see Rotten Tomatoes when they search up a movie? I personally don't.
+Does everyone want to see Reddit[fn:4] when looking for a product? Do people want to see Rotten Tomatoes when they search up a movie? I personally don't.
 
 I personally don't like Google Search due to its monopolistic nuture (which is true of the whole search engine industry [fn:2]), the difficulty for a small website to be indexed and [[https://irreal.org/blog/?p=9982][search warrants]] [fn:3].
 
@@ -28,13 +28,29 @@ Maybe I am doing the same mistake, since I don't personally feel a decline in th
 
 If [[https://dkb.io/post/organize-the-world-information][this page is indicative of the type of content they search for]] then we are diametric opposites, things like "American Revolution Blogs" [fn:6] or "What should I with my life" [fn:7] and "content that talks about the same idea as The Refragmentation by Paul Graham” [fn:5].
 
+** 28th - NameCheap to stop service to Russian Users
+
+/Disclaimer: not a fan of the Russian Government/
+
+According to sources ([[https://www.vice.com/en/article/4awb8w/namecheap-tells-russian-customers-to-find-another-registrar-due-to-russias-war-crimes][Vice]] and [[https://news.ycombinator.com/item?id=30504812][Hacker News]]), Russian registered users are being asked to leave. According to the e-mail they have sent they "no longer providing services to users registered in Russia".
+
+This was [[https://www.devever.net/~hl/namecheap-goodbye][to be expected]], NameCheap has broken the neutrality of domain registers in the past. This is [[https://en.wikipedia.org/wiki/First_they_came_...][a classic tale]] we have seen before, first they came for truly awful people and now there going after regular people.
+
+Individuals should not be punished for crimes they didn't commit. I don't believe individual Americans should be punished for [[https://en.wikipedia.org/wiki/Abu_Ghraib_torture_and_prisoner_abuse][war crimes]] (NSFL) there government committed in Iraq or Afghanistan, why should individual Russians be treated this way?
+
+I going to assume many websites that push Russian propaganda are going to register in a neutral country to appear neutral. Regular users are going to be the ones hurt. As collateral People who are against the polices of the Russian government will be hurt.
+
+- Better: "We NameCheap are no longer servicing these specified websites (list given), they are distributing Russian propaganda".
+
+- Best: The issue is handled by hosting providers. Domain registrars should be neutral.
+
 * Footnotes
 
 [fn:7] Literally the last thing I would search. Why would ask /other/ people on what should /I/ do? I do what I want.
 
 [fn:6] Why would you look for blogs? Especially on a subject that is not seeing much development. I would only read a book on the subject. Books are always more well-researched then blog posts.
 
-[fn:5] Why people are so obsessed with this guy? Did he invent HTTP? Did he make public-key cryptography? He literally just made a obsolete web app and has loads of cash and loads of free time to make silly analogies. They treat him like hes the greatest though leader of the 20th century.
+[fn:5] Why people are so obsessed with this guy? Did he invent HTTP? Did he make public-key cryptography? He literally just made a obsolete web app and has loads of cash and loads of free time to make silly analogies. They treat him like hes the greatest thought leader of the 20th century.
 
 I would ask this type of question to real people and we could bounce off ideas.
 
