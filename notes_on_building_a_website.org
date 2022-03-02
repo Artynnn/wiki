@@ -1,0 +1,59 @@
+:PROPERTIES:
+:ID:       65aaf7d9-bbf0-4cf3-8a8c-91c7422f8cf1
+:END:
+#+title: Notes on Building a Website
+#+filetags: :Web:
+#+date: <2022-03-01 Tue 14:58>
+
+#+begin_description
+These are my collected notes on building a website.
+#+end_description
+
+* Static hosting services
+* building
+** Favicons
+
+Your main favicon should be a SVG image. It scales well, its clearer and allows you to use CSS to manipulate it (e.g dark mode). You should have a back up =.ICO= favicon (32x32) aswell.
+
+=apple-touch-icon= (180x180) and webmanifest (192x192 and another image that is 512x512) for Icons that display on iOS and Android home screens.
+
+The best resource on making it is [[https://realfavicongenerator.net/][realfavicongenerator]] and its [[https://realfavicongenerator.net/svg-favicon/][SVG favicon generator]].
+
+*** confused on
+
+- What size should your SVG be? Almost all the websites ive seen say that .ICO should be 32x32. But I don't see anything clear on what size SVG icons should be other then be a square. Real favicon generator says that it should be 260x260.
+
+*** design strategies
+
+How do you accommodate things like varying color of the tab bar?
+
+- wrap in white (e.g Wikipedia, Amazon, Google Search): Usually it is a letter and its wrapped in a white background. Main problem faced is padding.
+
+- colorful (e.g. Facebook, Reddit, Hacker News, YouTube, most phone Icons): Logos are ultra bright so they work in both dark and light tab bars. Main drawback is that it can be quite gaudy.
+
+- indifference (Discogs): Tab bars are usally light colored so it doesn't matter.
+
+- light and dark supported (many personal websites): SVG favicon that accomdates to user agent preferences. This is obviously the best option.
+
+*** resources
+
+- [[https://css-tricks.com/svg-favicons-in-action/][SVG favicons in action]]
+- [[https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs][How to favicon in 2020]]
+
+** Typography
+
+Typography is a very complex subject but you only need to know very little to see massive improvments. Since I only know languages with latin characters, my understanding here is only applicable to that.
+
+Body text is the most key and it should be 65 characters wide (give or take). It should have strong contrast with the background color (which should be white, beige or black). Headings should be different in some way to the body text, and fewer the sub-headings, the better.
+
+Novelty plays a hugo role in how we appreciate typography. Having an aesthetic that different makes a difference. Typography and accessibility are frenemies.
+
+*** resourcs
+
+- http://web-accessibility.carnegiemuseums.org/foundations/semantic/
+- https://usability.yale.edu/web-accessibility/accessibility-yale
+
+** Accessibility
+*** resources
+
+- https://www.a11yproject.com/checklist/
