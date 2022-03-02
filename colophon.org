@@ -52,9 +52,9 @@ I personally do want RSS and I want that RSS to be useful. I think this is one o
 
 My current solution is to tag things "evergreen" (like a fully developed tree) if its in a very finished and complete state and this will syndicate full text in my website RSS feed. Of course evergreen content will get updated but its probably going to like 10% more not 95% more.
 
-Stubs and "saplings" can be followed via my github RSS feed.
+Stubs and "saplings" can be followed via my [[https://github.com/mapstruct/mapstruct/commits/master.atom][github RSS feed]][fn:1].
 
-I guess medium modifications will be posted on my Mastodon? IDK yet.
+More bloggy and status updates can be followed via my [[https://fosstodon.org/@artyn.rss][Mastodon feed]].
 
 ** Features
 
@@ -74,9 +74,25 @@ My website has a lot of features that aid its function as a personal wiki.
 
 Things I am not sure of adding right now but might in the future:
 
-- webmentions: I am not sure how to implement it. I think I want mainly the Mastodon support. I am interested in how bridging services to non webmention supporting sites are.
+- webmentions: I am not sure how to implement it. I think I want it mainly the Mastodon support. I am interested in how bridging services to non webmention supporting sites are. Some guides for Hugo ([[https://ascraeus.org/embracing-the-indieweb/][embacing the Indie Web]], [[https://anaulin.org/blog/adding-webmentions/][adding web mentions to my hugo site]])
+
+- access-keys: I would [[https://archive.fo/58CAY][follow the standard]].
+
+- [[http://microformats.org/wiki/microformats2][microformats2]]: I am in generally very confused on how to set this up. I need to do more reading. I have seen very few websites follow it, only Indieweb ones.
+
+- microData: Even more confused.
+
+** Useful documents
+
+On the management of wikis.
+
+- [[https://en.wikipedia.org/wiki/Help:Edit_summary#Always_provide_an_edit_summary][Wikipedia guide on Edit Summary]]
+- [[https://gist.github.com/Enegnei/a33e8c11e6bd23ac7b367a57b895d077][Revision Controlled Journalism]] ([[https://github.com/Enegnei/JacobAppelbaumLeavesTor][example]])
 
 * Style
 
-I like the Tufte design and it basicallys follow that, I am not using its style sheet at all just following some of its style.
+I like the Tufte design and it basically follow that, I am not using its style sheet at all just following some of its style.
 
+* Footnotes
+
+[fn:1] I wish included information on size of commit.
