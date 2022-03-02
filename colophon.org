@@ -42,13 +42,13 @@ There are many reasons why I prefer the personal wiki format for my website rath
 
 Blogs are great, but I don't think they suit the purpose of my personal website and what I want. My blogging needs are solved with Mastodon.
 
-I know the distinction between personal and blog can get blurry, some blogs are very personal wiki-eqsque, like for example Jeremy Friesen's [[https://takeonrules.com/][takeonrules]], who constantly updates old posts, maintains a glossary and weaves blogposts into series.
+I know the distinction between a personal wiki and a blog can get blurry, some blogs are very personal wiki-eqsque, like for example Jeremy Friesen's [[https://takeonrules.com/][takeonrules]], who constantly updates old posts, maintains a glossary and weaves blogposts into series.
 
-To me a blog mean being bound to publication date rather then the modification date.
+To me a blog means being bound to a publication date rather then the modification date.
 
-** Handling RSS
+** Handling RSS (syndication)
 
-I personally do want RSS and I want that RSS to be useful. I think this is one of the main benefits of blog is that it makes getting regular good content easy.
+I personally do want RSS and I want that RSS feed to be useful. I think this is one of the main benefits of blogs is that it makes getting regular good content easy.
 
 My current solution is to tag things "evergreen" (like a fully developed tree) if its in a very finished and complete state and this will syndicate full text in my website RSS feed. Of course evergreen content will get updated but its probably going to like 10% more not 95% more.
 
@@ -80,7 +80,9 @@ Things I am not sure of adding right now but might in the future:
 
 - [[http://microformats.org/wiki/microformats2][microformats2]]: I am in generally very confused on how to set this up. I need to do more reading. I have seen very few websites follow it, only Indieweb ones.
 
-- microData: Even more confused.
+- microData: Even more confused on this.
+
+- opengraph: How nessecary is this really? How much do meta tags just suffice?
 
 ** Useful documents
 
