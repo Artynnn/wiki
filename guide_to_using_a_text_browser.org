@@ -1,0 +1,173 @@
+:PROPERTIES:
+:ID:       d3c4a6c6-eccf-4b61-9eb2-0041553f9f12
+:END:
+#+title: Guide to Using a Text Browser
+#+filetags: :Web:
+#+date: <2022-02-25 Fri 10:38>
+
+* What are text browsers?
+
+Text Browser are browsers that are meant to be used to read static HTML documents. If you are a bit of a marketer you can say that it is the "engine that drives Web 1.0".
+
+While this is a huge topic and hard to summarize, I think that we are seeing an unhealthy trend of web browsers lacking in any way of user control, for example you can't rebind Firefox and Chromes keys through a menu, it has to be extremy hacky (and that is just one of many examples[fn:1]), the big browsers are made of tens of millions of lines of code and are [[https://www.devever.net/~hl/][catering to web applications, away from documents]].
+
+While I do think their focus on web applications is actually good, I don't like that I need this complex machinery to read simple documents. Thankfully their is a whole suite of programs that focus on web pages not web apps, text browsers.
+
+What is great about text browsers?
+
+- consistency (the looks are defined by you, all websites look the same).
+- keyboard controls.
+- scriptable (well depending on the text browser).
+
+Text browsers are optimized for reading web pages, and they do a fine job at that. The vast majority of extensions I have on my web browser (darkReader, Ublock Origin, Readability) are default for text browsers. Modern browsers aren't for reading web pages.
+
+The current text browser I use is only a few thousands lines (EWW). These things are simple.
+
+Text browsers can be run on almost any modern computer. I would say that any computer past the year 2000 can run a text browser.
+
+# - its a broad term
+# - it means moving away from Chrome and the monolith
+# - it doesn't just mean w3m but TUI / CLI apps for social media
+
+* What you can read
+
+- All blogs
+- most news websites
+- most encyclopedia style websites
+- some database websites (usually older websites)
+- no interactive website
+
+* Designing for text browsers
+
+If you know how to design for crawlers or HTML e-mail you know how to design for text browsers.
+
+It is very simple, just use semantic markup, the end.
+
+Your document should make sense as a HTML document with no classes or CSS.
+
+The mian principle that you need to follow is the *the accessibility hierachy*, your website should not be dependent on javascript, nor CSS, It should be viewable without that.
+
+1. the accessibility hierachy (HTML -> CSS -> Javascript)
+2. tables
+3. CLI apps to handle social media
+
+* reconmended websites
+
+- any blog that uses a static site generator (for example *.github.io websites)
+- legiblenews: Scrapes the wikipedia current events page. I find this to be best of these news websites.
+
+** hall of shame
+
+- Tedium: its funny how they have a lot of articles praising the simple web and simple web stacks. But they are not a simple website, they are bloat, with dumb images and have problems being displayed on most text browsers. Its clear to me that they don't design for text browsers. they can do better.
+
+  - example: disjointed element unhelpful titles, repeating text, unreadable body text if your text browser tries to match colors a bit (e.g elinks, w3m).
+
+- Gitlab: READMES should not require javascript to be read. See instead sourcehut for a supporting alternative. Or Cgit as well.
+
+** mainstream websites that work
+
+Giving rating to them as well. I wish their was a database of text browser support [might make one].
+
+- 5/5 wikipedia (and mediawiki sites)
+- 5/5 tv tropes
+- 5/5 html.duckduckgo.com (you can even enter search queries)
+- 3/5 fandom.com (sorta, not really)
+- 3/5 substack (lot of annoyances, it could be way more smoothless)
+- 3.5/5 medium (I find it slightly better then substack) their is also scribe.rip so medium is technically 4.5/5.
+- 2/5 xenforo forums sites (not as bad as I was expecting)
+- 3.5/5 proboards (very good for a forum)
+- 3/5 hacker news (the replies are all inline which is extremly annoying). Thankfully you can use hngopher.com to get a beter experience. 
+
+* Text browser options
+
+I would say the main ones that people use are w3m and EWW (Emacs). Lynx is a another option if don't like w3m. w3m seems to have more active developement? and is more popular.
+
+** my setup
+
+I rely on EWW and prot's eww extensions, these are available in my dotfile repository.
+
+#+begin_src emacs-lisp
+(use-package eww
+  :straight nil
+  :demand t
+  :custom
+  (eww-restore-desktop t)
+  (eww-desktop-remove-duplicates t)
+  (eww-auto-rename-buffer t)
+  (eww-header-line-format nil)
+  (eww-search-prefix "https://duckduckgo.com/html/?q=")
+  (eww-download-directory (expand-file-name "~/Downloads/eww-downloads"))
+  (eww-suggest-uris
+        '(eww-links-at-point
+          thing-at-point-url-at-point))
+  (eww-bookmarks-directory (locate-user-emacs-file "eww-bookmarks/"))
+  (eww-history-limit 150)
+  (eww-use-external-browser-for-content-type
+        "\\`\\(video/\\|audio\\)") ; On GNU/Linux check your mimeapps.list
+  (eww-browse-url-new-window-is-tab nil)
+  (eww-form-checkbox-selected-symbol "[X]")
+  (eww-form-checkbox-symbol "[ ]")
+  ;; NOTE `eww-retrieve-command' is for Emacs28.  I tried the following
+  ;; two values.  The first would not render properly some plain text
+  ;; pages, such as by messing up the spacing between paragraphs.  The
+  ;; second is more reliable but feels slower.  So I just use the
+  ;; default (nil), though I find wget to be a bit faster.  In that case
+  ;; one could live with the occasional errors by using `eww-download'
+  ;; on the offending page, but I prefer consistency.
+  ;;
+  ;; '("wget" "--quiet" "--output-document=-")
+  ;; '("chromium" "--headless" "--dump-dom")
+  (eww-retrieve-command nil)
+  :bind (:map eww-link-keymap
+	      ("v" . nil)
+	 :map eww-mode-map
+	      ("L" . eww-list-bookmarks)
+	 :map dired-mode-map
+	      ("E" . eww-open-file)
+	 :map eww-buffers-mode-map
+              ("d" . eww-bookmark-kill)
+	 :map eww-bookmark-mode-map
+	      ("d" . eww-bookmark-kill)))
+
+(use-package prot-eww
+  :straight nil
+  :demand t
+  :load-path "~/.emacs.d/contrib-lisp/"
+  :custom
+  (prot-eww-save-history-file "~/.emacs.d/prot-eww-visited-history")
+  (prot-eww-save-visited-history t)
+  (prot-eww-bookmark-link nil)
+  :hook ((prot-eww-history-mode . hl-line-mode))
+  ;; ERROR no history is defined?
+  :bind (("C-c w b" . prot-eww-visit-bookmark)
+	 ("C-c w e" . prot-eww-browse-dwim)
+	 ("C-c w s" . prot-eww-search-engine)
+	 :map eww-mode-map
+	 ("B" . prot-eww-bookmark-page)
+	 ("D" . prot-eww-download-html)
+         ("F" . prot-eww-find-feed)
+	 ("H" . prot-eww-list-history)
+	 ("b" . prot-eww-visit-bookmark)
+	 ("e" . prot-eww-browse-dwim)
+	 ("o" . prot-eww-open-in-other-window)
+	 ("E" . prot-eww-visit-url-on-page)
+	 ("J" . prot-eww-jump-to-url-on-page)
+	 ("R" . prot-eww-readable)
+	 ("Q" . prot-eww-quit)))
+#+end_src
+
+* Social media apps options
+
+1. telegram
+   1. telega
+2. reddit
+   1. tuir
+
+* websites that you can read
+* See also
+
+- https://www.xkyle.com/A-Comparison-of-Text-Based-Web-Browsers/
+
+* Footnotes
+
+[fn:1] Web browsers should come with adblocking, dark mode reader mode, content blocking option (e.g javascript, images, websites) by default aswell. The reason why they don't is mainly due to that that they want to as much money as possible.
