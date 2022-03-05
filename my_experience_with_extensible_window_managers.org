@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       d4fdc44a-a1aa-47f1-a8a7-46489fdb3a50
+:END:
+#+title: my Experience with Extensible Window Managers
+#+filetags: :Linux:
+#+date: <2022-03-05 Sat 04:02>
+
+Extensible window managers (WM) are window managers that allow scripting in real programming languages, the seperation between the program and packges people write for it are blurred. It is a true hackers tool, and in principle much less limiting then your traditional window manager (i3, ratpoison, bspwm, herbluftswm).
+
+* Ones I don't plan on trying
+
+# don't say it so harshly
+
+AwesomeWM doesn't appeal to me since it is Lua, and its configuration feels too complicated. Sawfish is basically obsolete. All the other ones are too minor.
+
+* Xmonad
+
+This is the WM that I have the least trouble using nixOS.
+
+* StumpWM
+
+stumpWM is basically the sucessor to ratpoison. So it shares its same basic ideas.
+
+* Qtile
+
+This is the WM that I have the most trouble using on nixOS, this seems to be a problem with python packaging in general.
+
+Qtile is the only extensible WM that is trying to come to wayland, which I find a good development. Due to this my focus on it is more wayland based. So it is probably not a fair judgement. Wayland development only started a year ago (maybe even less). 
+
+Despite it using one of the most popular languages, it is probably the least popular. I don't really get this. I find it overall easy to read.
