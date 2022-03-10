@@ -20,6 +20,7 @@ Currently popular static hosting providers:
 - Cloudflare Pages
 - Digital Ocean App Platform
 - GitHub Pages
+- Gitlab Pages
 - Netlify
 - Vercel
 
