@@ -1,0 +1,44 @@
+I am a bit of a weird case, I want to compose and make music but I don't have a instrument. All I have is a Thinkpad X420. I will try out and review various programs to make music, all are quite varied.
+
+I think each tool serves their purpose and can probably be combined in a recording.
+
+* supercollider
+
+** whats interesting about it
+
+Its programmable music with a C and smalltalk like language to accompany it
+
+I chose it as a example of livecoding / computer music since its one of the oldest and most well known.
+
+their is also foxdot which builds on top of supercollider which I might try later.
+
+The examples they have are mainly glitch and minimalism inspired. I find some of the examples extremly unlistenable. My favorite was the Steve Reich inspired one.
+
+** example
+
+- https://supercollider.github.io/sc-140
+- https://sccode.org/1-4Zx
+- https://sccode.org/
+- https://supercollider.github.io/projects
+- http://cs.wellesley.edu/~cs203/lecture_materials/sclang_basics/sclang_basics.pdf
+- https://cs.wellesley.edu/~cs203/pages/assignments.html
+- Ultimate ADOM https://www.youtube.com/watch?v=wopKdVE0zj8
+
+* musescore
+
+** whats interesting about it
+
+It makes practicing music theory easy and it makes it possible to compose music directly from sheet music.
+
+- https://baturin.org/music/compositions/
+- https://musescore.org/en/handbook
+
+* lilypond
+
+** whats interesting about it
+
+It makes typesetting music easy. And makes it possible to make music from plaintext.
+
+* audacity
+* milkytracker
+
